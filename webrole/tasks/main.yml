@@ -6,3 +6,9 @@
     name: "{{apache2var}}"
     state: present
   notify: restartwebserver
+
+- name : star the apche2 server 
+  ansible.builtin.service:
+     name: "{{apache2var}}"
+     state: started
+  notify: restartwebserver
