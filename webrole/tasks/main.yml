@@ -1,3 +1,8 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for webrole
+- name: install apache2 on debian 
+  ansible.builtin.apt:
+    name: "{{apache2var}}"
+    state: present
+  notify: restartwebserver
